@@ -25,6 +25,8 @@ public:
         return ;
     }
     friend void output(Point &); // 告诉Point类 他的邻居，隔壁老王
+    friend ostream &operator<<(ostream &, const Point &);
+
 private:
     int x, y;
 
@@ -35,9 +37,20 @@ void output(Point &a) {
     return ;
 }
 
+/*
+ * 重载输出运算符 << 时， 返回值为 ostream 类型的引用
+ * 是方便 运算符的连续使用 << a << b << c;
+ *
+ */
+ostream &operator<<(ostream &out, const Point &p) {
+    out << "Point(" << p.x << ", " << p.y << ")";
+    return out;
+}
+
 int main() {
     Point p(3, 4);
     p.output();
     output(p);
+    cout << p << endl;
     return 0;
 }
