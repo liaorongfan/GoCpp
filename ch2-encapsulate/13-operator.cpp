@@ -6,6 +6,7 @@
  ************************************************************************/
 
 #include<iostream>
+#include<functional>
 using namespace std;
 
 #define BEGINS(x) namespace x {
@@ -118,7 +119,7 @@ int main() {
 ENDS(test2)
 
 
-BEGINS(test3)
+BEGINS(array_object)
 /*
  * 数组对像
  *
@@ -159,7 +160,7 @@ int main() {
     return 0;
 }
 
-ENDS(test3)
+ENDS(array_object)
 
 
 BEGINS(function_object)
@@ -167,6 +168,7 @@ BEGINS(function_object)
 class Function {
 public:
     int operator()(int a, int b) {
+        cout << "INNER CLASS : ";
         return a + b;
     }
 private:
@@ -174,12 +176,13 @@ private:
 };
 
 int func1(int a, int b) {
+    cout << "INNER FUNC1 : "; 
     return a + b;
 }
 
 
 int main() {
-    Fucntion func;
+    Function func;
     cout << func(3, 4) << endl;
     /*
      * 函数指针本质上，他在指向一类具有相同外在表现的函数
@@ -190,10 +193,14 @@ int main() {
      *
      * Cpp中的函数指针对象 （由function 关键字定义）
      *
-     *
      */
     int (*p)(int, int) = func1; // 函数指针定义 
     cout << p(3, 4) << endl;    // 函数指针调用
+    function<int(int, int)> q;  // q 函数指针对象
+    q = func1;  // 指向 指针函数
+    cout<< "q pointer : " << q(3, 4) << endl;
+    q = func;   // 指向 函数对象
+    cout << "q pointer : " << q(3, 4) << endl;
     return 0;
 }
 
@@ -202,12 +209,82 @@ int main() {
 ENDS(function_object)
 
 
+BEGINS(pointer_object)
+
+struct A {
+    A(): x(0), y(0) {}  // 默认构造函数初始化 x , y 为0
+    int x, y;
+};
+
+ostream &operator<<(ostream &out, const A &a) {
+    out << a.x << " " << a.y;
+    return out;
+}
+
+class Pointer {
+public:
+    Pointer(A *p = nullptr): p(p) {}
+    A *operator->() {return p; } // 返回的是 一个 A 类对象的地址 A* 
+    A *operator->() const {return p; } // 返回的是 一个 A 类对象的地址 A* 
+
+    A &operator*() {return *p; } // 返回一个 A 类对象的引用 
+    A &operator*() const {return *p; } // 返回一个 A 类对象的引用 
+
+    A *operator+(int n) {return p + n; }
+    A *operator+(int n) const {return p + n; }
+
+    A *operator-(int n) {return p - n; }
+    A *operator-(int n) const {return p - n; }
+
+    A &operator[](int ind) { return *(p + ind); }
+    A &operator[](int ind) const { return *(p + ind); }
+
+    int operator-(const Pointer &p) { return this-> p - p.p;}
+    friend ostream &operator<<(ostream &, const Pointer &);
+
+private:
+    A *p;
+};
+
+ostream &operator<<(ostream &out, const Pointer &p) {
+    out << p.p;
+    return out;
+}
+
+int main() {
+    A a, b;
+    Pointer p = &a, q = &b;
+    cout << a << endl;
+    p->x = 3;           // -> 间接引用运算符 . 直接引用运算符
+    p->y = 4;
+    cout << a << endl;
+    cout << *p << endl; // *q * 取值运算符， 取出p地址中的内容
+    cout << p << endl;
+    cout << (p + 1) << endl;
+    cout << (p - 1) << endl;
+    cout << (p - q) << endl;   
+    cout << p[0] << endl;     
+    const Pointer cp = &a;
+    cout << *cp << endl;       
+    cout << (cp - 1) << endl;
+    cout << (cp + 1) << endl;  
+    cout << cp[0] << endl;
+    return 0;
+}
+
+
+
+ENDS(pointer_object)
+
+
 
 
 int main() {
 
     //test2::main();
-    test3::main();
+    //array_object::main();
+    //function_object::main();
+    pointer_object::main();
     return 0;
 }
 
