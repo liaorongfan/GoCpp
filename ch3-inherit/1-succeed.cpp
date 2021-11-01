@@ -125,6 +125,125 @@ int main() {
 
 ENDS(test2)
 
+
+BEGINS(test3) 
+/*
+ *  指针在继承场景下的表现
+ *
+ */
+class Base {
+public:
+    Base(string name): class_name(name) {}
+    int x;
+    string class_name;
+private:
+    int y;
+};
+
+class A: public Base {
+public:
+    A(): Base("class_A") {}
+};
+
+class B: public Base {
+public:
+    B(): Base("class_B") {}
+};
+ 
+class C: public Base {
+public:
+    C(): Base("class_C") {}
+};
+
+void func(Base *b) {
+    cout << "input class : " << b->class_name << endl;
+    return ; 
+}
+
+int main() {
+    /*
+     * 在cpp中子类到父类存在隐式类型转换
+     * 子类对象在概念上一定是个父类 狗是动物， 猫是动物， 鸟是动物 
+     */
+    A a;
+    B b;
+    C c;
+    func(&a);
+    func(&b);
+    func(&c);
+    cout << "sizeof(Base) = " << sizeof(Base) << endl;
+    cout << "sizeof(A)    = " << sizeof(A) << endl;
+    return 0;
+}
+
+
+
+
+
+ENDS(test3) 
+
+
+BEGINS(test4)
+
+class ATTR_BASE {
+public:
+    ATTR_BASE(string name): name(name) {
+        cout << "constructor" << name << endl;
+    }
+    ~ATTR_BASE() {
+        cout << "destructor : " << name << endl;
+    }
+    string name;  
+};
+
+
+class ATTR1: public ATTR_BASE {
+public:
+    ATTR1(string name): ATTR_BASE(name) {}
+};
+
+class ATTR2: public ATTR_BASE {
+public:
+    ATTR2(string name): ATTR_BASE(name) {}
+};
+
+class Base {
+public:
+    Base(): attr1("attr1 in Base"), attr2("attr2 in Base") {
+        cout << "Base constructor done" << endl;
+    }
+    ~Base() {
+        cout << "Base destructor done" << endl;
+    }
+
+private:
+    ATTR1 attr1;
+    ATTR2 attr2;
+};
+
+class A: public Base {
+public:
+    A(): attr1("attr1 in A"), attr2("attr2 in A") {
+        cout << "A constructor done" << endl;
+    }
+    ~A() {
+        cout << "A destrctor done" << endl;
+    }
+private:
+    ATTR1 attr1;
+    ATTR2 attr2;
+};
+
+
+int main() {
+    A a;
+    return 0;
+}
+
+ENDS(test4)
+
+
+
 /*
  * 继承的好处
  *   减少重复的代码量
@@ -135,7 +254,8 @@ ENDS(test2)
 int main() {
 
     // test1::main();
-    test2::main();
-
+    // test2::main();
+    // test3::main();
+    test4::main();
     return 0;
 }
