@@ -30,7 +30,7 @@ public:
     UNCOPYABLE(const UNCOPYABLE &) = delete;
 
     UNCOPYABLE &operator=(const UNCOPYABLE &) = delete;
-    UNCOPYABLE &opetator=(const UNCOPYABLE &) const = delete;
+    // UNCOPYABLE &opetator=(const UNCOPYABLE &) const = delete;
 protected: 
     // 将默认构造声明为受保护权限
     UNCOPYABLE() = default;
@@ -55,8 +55,78 @@ int main() {
 
 ENDS(test1)
 
+BEGINS(test2)
+
+class HAS_XY {
+public:
+    int x, y;
+};
+
+class HAS_XYZ: public HAS_XY {
+public:
+    int z;
+};
+
+class A: public HAS_XY {
+public:
+    A() { x = y = 1; }
+};
+
+class B: public HAS_XY {
+public:
+    B() { x = y = 2; }
+};
+
+class C: public HAS_XYZ {
+public:
+    C() { x = y = z = 3; }
+};
+
+class D: public HAS_XY {
+public:
+    D() { x = y = 4; }
+};
+
+class E: public HAS_XYZ {
+public:
+    E() { x = y = z = 5; }
+};
+
+
+void func(HAS_XY &a) {
+    cout << "has xy : ";
+    cout << a.x << ", " << a.y << endl;
+    return ;
+}
+
+
+void func(HAS_XYZ &a) {
+    cout << "has xyz : ";
+    cout << a.x << ", " << a.y << ", " << a.z << endl;
+    return ;
+}
+
 
 int main() {
-    test1::main();
+    A a;
+    B b;
+    C c;
+    D d;
+    E e;
+    func(a), func(b), func(c), func(d), func(e); 
     return 0;
 }
+
+
+
+
+ENDS(test2)
+
+int main() {
+    // test1::main();
+    test2::main();
+    return 0;
+}
+
+
+
