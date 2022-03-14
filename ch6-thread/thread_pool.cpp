@@ -74,28 +74,28 @@ ENDS(task_test)
 BEGINS(thread_pool_test)
 
 
-    bool is_prime(int x) {
-        for (int i = 2; i * i <= x; i++) {
-            if (x % i == 0) return false;
-        }
-        return true;
+bool is_prime(int x) {
+    for (int i = 2; i * i <= x; i++) {
+        if (x % i == 0) return false;
     }
+    return true;
+}
 
-    int prime_count(int l, int r) {
-        int ans = 0;
-        for (int i = l; i <= r; i++) {
-            ans += is_prime(i);
-        }
-        return ans;
+int prime_count(int l, int r) {
+    int ans = 0;
+    for (int i = l; i <= r; i++) {
+        ans += is_prime(i);
     }
+    return ans;
+}
 
 // entry func for multi-thread processing
-    void worker(int l, int r, int &ret) {
-        cout << this_thread::get_id() << " begin" << endl;
-        ret = prime_count(l, r);
-        cout << this_thread::get_id() << " done" << endl;
-        return ;
-    }
+void worker(int l, int r, int &ret) {
+    cout << this_thread::get_id() << " begin" << endl;
+    ret = prime_count(l, r);
+    cout << this_thread::get_id() << " done" << endl;
+    return ;
+}
 
 class Task {
     public:
