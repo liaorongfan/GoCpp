@@ -48,13 +48,70 @@ int main() {
 }
 ENDS(address)
 
+BEGINS(opt)
+
+int main() {
+    int x = 42;
+    int* p = &x;
+    int* q = &x;
+    std::cout << p << std::endl;
+    // address id increases the size of int (4 byte)
+    std::cout << p + 1 << std::endl;
+    std::cout << p - 2 << std::endl;
+    std::cout << (p == q) << std::endl;
+    return 0;
+}
+
+ENDS(opt)
+
+BEGINS(void_ptr)
+// used as placeholder for pointer variable
+// lost the size info of variable
+void fun(void* para) {
+    std::cout << para << std::endl;
+    // std::cout << para + 1 << std::endl;
+    // will cause error , void pointer has not size info of var,
+    // so adding opt is not allowed
+    // and g++ are different clang when compiling
+}
+
+int main() {
+    int* r = nullptr;
+    char* c = nullptr;
+    fun(r);
+    fun(c);
+    return 0;
+}
+
+ENDS(void_ptr)
+
+BEGINS(pass_addr)
+
+void fun(int* param) {
+    *param = *param + 1;
+}
+
+int main() {
+    int x = 3;
+    fun(&x);
+    std::cout << x << std::endl;
+    return 0;
+}
+
+ENDS(pass_addr)
+
+
+
 int* p1;
 
 int main() {
 //    ref::main();
 //    len::main();
-    address::main();
-    std::cout << p1 << std::endl;
+//    address::main();
+//    opt::main();
+//    void_ptr::main();
+    pass_addr::main();
+//    std::cout << p1 << std::endl;
 //    std::cout << *p1 << std::endl;
 /* dereference a non-initial global pointer, it will cause segment-fault
  * because global pointer will be initialized to 0 by default
