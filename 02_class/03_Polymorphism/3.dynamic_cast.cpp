@@ -44,11 +44,11 @@ int main() {
     // 如果p不是空地址
     if (p) ((void **)(p))[0] = ((void **)(&a))[0];
     if (dynamic_cast<A *>(p) != nullptr) {
-        cout << "p pointer A class object" << endl;
+        cout << "p pointer A 02_class object" << endl;
     } else if (dynamic_cast<B *>(p) != nullptr) {
-        cout << "p pointer B class object" << endl;
+        cout << "p pointer B 02_class object" << endl;
     } else if (dynamic_cast<C *>(p)) {
-        cout << "p pointer C class object" << endl;
+        cout << "p pointer C 02_class object" << endl;
     } else {
         cout << "p is nullptr" << endl;
     }

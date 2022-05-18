@@ -103,7 +103,7 @@ public:
 };
 
 void func(Base &b) {
-    cout << "input class : " << b.class_name << endl;
+    cout << "input 02_class : " << b.class_name << endl;
     return ; 
 }
 
@@ -156,7 +156,7 @@ public:
 };
 
 void func(Base *b) {
-    cout << "input class : " << b->class_name << endl;
+    cout << "input 02_class : " << b->class_name << endl;
     return ; 
 }
 

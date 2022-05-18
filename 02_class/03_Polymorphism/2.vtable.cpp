@@ -124,7 +124,7 @@ BEGINS(test3)
 class Base {
 public: 
     virtual void func(int x) {
-        cout << this << " : class Base : "<< x << endl;
+        cout << this << " : 02_class Base : "<< x << endl;
         return ;
     }
 };
@@ -133,7 +133,7 @@ class A: public Base {
 public:
     void func(int x) override {
         cout << "this->x = " << this->x << endl;
-        cout << this << " : class A : " << x << endl;
+        cout << this << " : 02_class A : " << x << endl;
         return ;
     }
     int x;

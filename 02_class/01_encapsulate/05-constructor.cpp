@@ -27,7 +27,7 @@ public :
      *
      */
     A(int x): x(x) {
-        cout << this << " : class A : " << x << endl;
+        cout << this << " : 02_class A : " << x << endl;
     }
     A(const A &a) {
         /*

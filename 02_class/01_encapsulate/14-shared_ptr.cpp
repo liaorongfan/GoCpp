@@ -167,7 +167,7 @@ shared_ptr make_shared() {
 }
 
 ostream &operator<<(ostream &out, const A &a) {
-    out << "class A :" << a.x << " , " << a.y << endl;
+    out << "02_class A :" << a.x << " , " << a.y << endl;
     return out;
 }
   
