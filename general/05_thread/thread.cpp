@@ -23,9 +23,9 @@ void print(int a, int b) {
 }
 
 int main() {
-    thread t1(func);         // t1: thread object
+    thread t1(func);         // t1: 05_thread object
     t1.join();               // wait for t1
-    thread t2(print, 3, 4);  // another thread | pass parameters to a thread
+    thread t2(print, 3, 4);  // another 05_thread | pass parameters to a 05_thread
     t2.join();               // wait for t2
     return 0;
 }
@@ -51,7 +51,7 @@ int prime_count(int l, int r) {
     return ans;
 }
 
-// entry func for multi-thread processing
+// entry func for multi-05_thread processing
 void worker(int l, int r, int &ret) {
     cout << this_thread::get_id() << " begin" << endl;
     ret = prime_count(l, r);
@@ -70,7 +70,7 @@ int main() {
 
     int ans = 0;
     for (auto x : ret) ans += x;
-    for (auto x : t) delete x;   // delete every thread object
+    for (auto x : t) delete x;   // delete every 05_thread object
     cout << ans << endl;
     return 0;
 }

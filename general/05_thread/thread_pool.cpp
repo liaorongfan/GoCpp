@@ -89,7 +89,7 @@ int prime_count(int l, int r) {
     return ans;
 }
 
-// entry func for multi-thread processing
+// entry func for multi-05_thread processing
 void worker(int l, int r, int &ret) {
     cout << this_thread::get_id() << " begin" << endl;
     ret = prime_count(l, r);
