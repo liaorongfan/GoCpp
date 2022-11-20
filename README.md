@@ -8,4 +8,9 @@ So I'd like to go with Cpp for Computer Vision / Machine Learning in my spare ti
 would be helpful for someone else.
 
 ## Contents
+reference
+
+- http://c.biancheng.net/cplus/
+- https://www.runoob.com/cplusplus/cpp-tutorial.html
+
 TBD
