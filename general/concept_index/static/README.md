@@ -27,7 +27,7 @@ using namespace std;
 
 void demo() 
 { 
-	// static variable 
+	// 02_static variable 
 	static int count = 0; 
 	cout << count << " "; 
 	
@@ -225,7 +225,7 @@ using namespace std;
 class Apple 
 { 
     public: 
-        // static member function 
+        // 02_static member function 
         static void printMsg() 
         {
             cout<<"Welcome to Apple!"; 
@@ -235,7 +235,7 @@ class Apple
 // main function 
 int main() 
 { 
-    // invoking a static member function 
+    // invoking a 02_static member function 
     Apple::printMsg(); 
 } 
 ```

@@ -58,6 +58,6 @@ SmartArrNode<T>::~SmartArrNode() {
     
 }
 
-// template class SmartArrNode<int>;    如果单独放入cpp文件需显示实例化，或将cpp文件引入调用程序
+// template 01_class SmartArrNode<int>;    如果单独放入cpp文件需显示实例化，或将cpp文件引入调用程序
 
 #endif

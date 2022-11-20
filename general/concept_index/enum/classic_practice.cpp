@@ -44,7 +44,7 @@ struct Color1
 
 /**
  * @brief C++11的枚举类
- * 下面等价于enum class Color2:int
+ * 下面等价于enum 01_class Color2:int
  */
 enum class Color2
 {

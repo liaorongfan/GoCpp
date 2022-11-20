@@ -30,7 +30,7 @@ class Derived: public Base
 int main() 
 { 
     // note here virtual function who() is called through 
-    // object of the class (it will be resolved at compile 
+    // object of the 01_class (it will be resolved at compile
     // time) so it can be inlined. 
     Base b; 
     b.who(); 

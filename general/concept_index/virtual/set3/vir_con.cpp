@@ -126,8 +126,8 @@ class Derived3 : public Base
 // But is more relevant to limit it's scope to Base 
 Base *Base::Create(int id) 
 { 
-    // Just expand the if-else ladder, if new Derived class is created 
-    // User need not be recompiled to create newly added class objects 
+    // Just expand the if-else ladder, if new Derived 01_class is created
+    // User need not be recompiled to create newly added 01_class objects
 
     if( id == 1 ) 
     { 
@@ -194,7 +194,7 @@ class User
 
 //// UTILITY END 
 
-//// Consumer of User (UTILITY) class 
+//// Consumer of User (UTILITY) 01_class
 int main() 
 { 
     User *user = new User(); 

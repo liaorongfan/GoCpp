@@ -12,7 +12,7 @@ T Min(T a,T b) {
 }
 /*
 为了区别类与模板参数中的类型关键字class，标准C++提出?了用typename作为模板参数的类型关键字，同时也支持使用class。
-比如，把min定义的template <class T>写成下面的形式是完全等价的：
+比如，把min定义的template <01_class T>写成下面的形式是完全等价的：
 */
 template <typename T>
 T myMin(T a, T b){

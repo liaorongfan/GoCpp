@@ -1,4 +1,4 @@
-// variables inside a class 
+// variables inside a 01_class
 
 #include<iostream> 
 using namespace std; 

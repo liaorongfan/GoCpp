@@ -1,4 +1,4 @@
-// the use of static Static 
+// the use of 02_static Static
 // variables in a Function 
 #include <iostream> 
 #include <string> 
@@ -6,7 +6,7 @@ using namespace std;
 
 void demo() 
 { 
-    // static variable 
+    // 02_static variable
     static int count = 0; 
     cout << count << " "; 
 

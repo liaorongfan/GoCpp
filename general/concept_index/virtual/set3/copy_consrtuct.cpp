@@ -34,7 +34,7 @@ int main()
     // Type of s1 and s2 are concrete to compiler 
 
     // How can we create Derived1 or Derived2 object 
-    // from pointer (reference) to Base class pointing Derived object? 
+    // from pointer (reference) to Base 01_class pointing Derived object?
 
     return 0; 
 } 

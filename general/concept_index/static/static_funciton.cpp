@@ -4,7 +4,7 @@ using namespace std;
 class Apple 
 { 
     public: 
-        // static member function 
+        // 02_static member function
         static void printMsg() 
         { 
             cout<<"Welcome to Apple!"; 
@@ -14,7 +14,7 @@ class Apple
 // main function 
 int main() 
 { 
-    // invoking a static member function 
+    // invoking a 02_static member function
     Apple::printMsg(); 
 } 
 

@@ -14,7 +14,7 @@
  */
 class Test 
 {    
-    // Data members of class 
+    // Data members of 01_class
 public: 
     // Pure Virtual Function 
     virtual void show() = 0; 

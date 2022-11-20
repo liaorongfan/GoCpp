@@ -1,43 +1,47 @@
 #include<iostream>
 using namespace std;
 
-/*
-先构造成员
-再构造自身（调用构造函数）
-*/
-
 class A { 
 public: 
 	A() { cout<<"Constructing A"<<endl;} 
 	~A(){ cout<<"Destructing A"<<endl;}
 };
+
 class B {
 public: 
 	B() { cout<<"Constructing B"<<endl;}
 	~B(){ cout<<"Destructing B"<<endl;}
 };
 
-class C 
-{
+class C {
 public: 
 	C() { cout<<"Constructing C"<<endl;}
 	~C(){ cout<<"Destructing C"<<endl;}
-	B b;
-	A a;
 };
 
-int main()
-{	
-    C c; 
-    system("pause");
+class D: public C {
+public: 
+	D() { cout<<"Constructing D"<<endl;}
+	~D(){ cout<<"Destructing D"<<endl;}
+	B b;
+	A a;
+	C c;
+};
+
+int main() {
+	D d;
 }
 
 /*
 执行结果：
+Constructing C
 Constructing B
 Constructing A
 Constructing C
+Constructing D
+Destructing D
 Destructing C
 Destructing A
 Destructing B
+Destructing C
 */

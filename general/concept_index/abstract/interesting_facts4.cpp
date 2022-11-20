@@ -9,7 +9,7 @@
 #include<iostream> 
 using namespace std; 
 
-// An abstract class with constructor 
+// An abstract 01_class with constructor
 class Base 
 { 
     protected: 

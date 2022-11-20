@@ -36,7 +36,7 @@ class Engineer: public Employee {
 // Similarly, there may be other types of employees 
 // We need a very simple function to increment salary of all employees 
 // Note that emp[] is an array of pointers and actual pointed objects can 
-// be any type of employees. This function should ideally be in a class  
+// be any type of employees. This function should ideally be in a 01_class
 // like Organization, we have made it global to keep things simple 
 void globalRaiseSalary(Employee *emp[], int n) 
 { 

@@ -21,7 +21,7 @@ int main() {
  *      -S assembly compile not to binary code
  *      -g add debug info
  *      -I specify header file directory
- *      --static include dependency libs into execute file
+ *      --02_static include dependency libs into execute file
  * example:
  *      $ g++ main.cpp person/person.cpp -I ./person
  *
