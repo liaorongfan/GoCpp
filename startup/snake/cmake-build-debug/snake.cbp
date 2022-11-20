@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6"/>
+	<Project>
+		<Option title="snake"/>
+		<Option makefile_is_custom="1"/>
+		<Option compiler="gcc"/>
+		<Option virtualFolders="CMake Files\;"/>
+		<Build>
+			<Target title="all">
+				<Option working_dir="/home/rongfan/13-CPP/snake/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j6 -f &quot;/home/rongfan/13-CPP/snake/cmake-build-debug/Makefile&quot;  VERBOSE=1 all"/>
+					<CompileFile command="/usr/bin/make -j6 -f &quot;/home/rongfan/13-CPP/snake/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j6 -f &quot;/home/rongfan/13-CPP/snake/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j6 -f &quot;/home/rongfan/13-CPP/snake/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="rebuild_cache">
+				<Option working_dir="/home/rongfan/13-CPP/snake/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j6 -f &quot;/home/rongfan/13-CPP/snake/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
+					<CompileFile command="/usr/bin/make -j6 -f &quot;/home/rongfan/13-CPP/snake/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j6 -f &quot;/home/rongfan/13-CPP/snake/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j6 -f &quot;/home/rongfan/13-CPP/snake/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="edit_cache">
+				<Option working_dir="/home/rongfan/13-CPP/snake/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j6 -f &quot;/home/rongfan/13-CPP/snake/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
+					<CompileFile command="/usr/bin/make -j6 -f &quot;/home/rongfan/13-CPP/snake/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j6 -f &quot;/home/rongfan/13-CPP/snake/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j6 -f &quot;/home/rongfan/13-CPP/snake/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="snake">
+				<Option output="/home/rongfan/13-CPP/snake/cmake-build-debug/snake" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/rongfan/13-CPP/snake/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/home/rongfan/13-CPP/snake/."/>
+					<Add directory="/usr/include/c++/9"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/9"/>
+					<Add directory="/usr/include/c++/9/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/9/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j6 -f &quot;/home/rongfan/13-CPP/snake/cmake-build-debug/Makefile&quot;  VERBOSE=1 snake"/>
+					<CompileFile command="/usr/bin/make -j6 -f &quot;/home/rongfan/13-CPP/snake/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j6 -f &quot;/home/rongfan/13-CPP/snake/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j6 -f &quot;/home/rongfan/13-CPP/snake/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="snake/fast">
+				<Option output="/home/rongfan/13-CPP/snake/cmake-build-debug/snake" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/rongfan/13-CPP/snake/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/home/rongfan/13-CPP/snake/."/>
+					<Add directory="/usr/include/c++/9"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/9"/>
+					<Add directory="/usr/include/c++/9/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/9/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j6 -f &quot;/home/rongfan/13-CPP/snake/cmake-build-debug/Makefile&quot;  VERBOSE=1 snake/fast"/>
+					<CompileFile command="/usr/bin/make -j6 -f &quot;/home/rongfan/13-CPP/snake/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j6 -f &quot;/home/rongfan/13-CPP/snake/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j6 -f &quot;/home/rongfan/13-CPP/snake/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+		</Build>
+		<Unit filename="/home/rongfan/13-CPP/snake/Game.cpp">
+			<Option target="snake"/>
+		</Unit>
+		<Unit filename="/home/rongfan/13-CPP/snake/Game.h">
+			<Option target="snake"/>
+		</Unit>
+		<Unit filename="/home/rongfan/13-CPP/snake/Player.h">
+			<Option target="snake"/>
+		</Unit>
+		<Unit filename="/home/rongfan/13-CPP/snake/SmartArr.h">
+			<Option target="snake"/>
+		</Unit>
+		<Unit filename="/home/rongfan/13-CPP/snake/SmartArrNode.h">
+			<Option target="snake"/>
+		</Unit>
+		<Unit filename="/home/rongfan/13-CPP/snake/Snake.cpp">
+			<Option target="snake"/>
+		</Unit>
+		<Unit filename="/home/rongfan/13-CPP/snake/Snake.h">
+			<Option target="snake"/>
+		</Unit>
+		<Unit filename="/home/rongfan/13-CPP/snake/main.cpp">
+			<Option target="snake"/>
+		</Unit>
+		<Unit filename="/home/rongfan/13-CPP/snake/test.cpp">
+			<Option target="snake"/>
+		</Unit>
+		<Unit filename="/home/rongfan/13-CPP/snake/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\"/>
+		</Unit>
+	</Project>
+</CodeBlocks_project_file>

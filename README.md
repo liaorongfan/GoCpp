@@ -14,3 +14,12 @@ reference
 - https://www.runoob.com/cplusplus/cpp-tutorial.html
 
 TBD
+
+## Thanks to
+- https://github.com/Light-City/CPlusPlusThings
+- https://github.com/applenob/Cpp_Primer_Practice
+- https://github.com/liwei-cpp/MetaNN
+- https://github.com/Alinshans/MyTinySTL
+- https://github.com/zhjphp/snake
+- 
+[comment]: <> (- https://github.com/taylorconor/tinytetris)
