@@ -1,0 +1,8 @@
+/obj
+Grape
+!Grape/
+libGrape.a
+libGrape.so
+Test
+/data
+/model

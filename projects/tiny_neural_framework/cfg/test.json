@@ -1,0 +1,17 @@
+{
+    "op_path": {
+        "path_list_": []
+    },
+    "optimizer_list": {
+        "optimizer_mapL": []
+    },
+    "graphs": {
+        "graph_map_": []
+    },
+    "connections": {
+        "connection_list_": []
+    },
+    "net": {
+        "max_iter_": 0
+    }
+}
